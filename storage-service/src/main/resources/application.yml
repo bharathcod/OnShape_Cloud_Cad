@@ -1,0 +1,20 @@
+server:
+  port: 8087
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+cloud:
+  aws:
+    s3:
+      endpoint: http://localhost:9000   # MinIO endpoint
+      bucket: cad-files
+      accessKey: minioadmin
+      secretKey: minioadmin
+      region: us-east-1
+
+jwt:
+  secret: secret-key-for-jwt
